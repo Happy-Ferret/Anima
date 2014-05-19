@@ -2,7 +2,9 @@
    until further notice/application of a formal license -}
 
 module Main where
-import System.Environment
+import System.IO.UTF8
+import System.Environment (getArgs)
+import Prelude hiding (readFile, writeFile, putStrLn, putStr)
 import Control.Monad
 import System.Exit
 
