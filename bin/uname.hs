@@ -3,7 +3,6 @@
 
 module Main where
 import System.Environment
-import Control.Monad
 import System.Exit
 import System.Info
 
@@ -12,5 +11,6 @@ main = getArgs >>= parse
 
 parse ["-h"] = help >> exitWith ExitSuccess
 parse [] = putStrLn os
+parse ["-m"] = putStrLn arch
 
 help = putStrLn "<help text>"
